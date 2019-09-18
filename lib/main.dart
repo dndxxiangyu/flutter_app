@@ -16,8 +16,23 @@ class MyApp extends StatelessWidget {
             title: new Text("welcome to flutter"),
           ),
           body: new Center(
-            child: new Text(wordPair.asPascalCase),
+            child: new RandomWords()
           ),
         ));
+  }
+}
+
+class RandomWords extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return new RandomWordState();
+  }
+}
+
+class RandomWordState extends State<RandomWords> {
+  @override
+  Widget build(BuildContext context) {
+    var wordPair = new WordPair.random();
+    return new Text(wordPair.asPascalCase);
   }
 }
