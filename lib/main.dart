@@ -9,7 +9,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-        title: "welcome to flutter", home: new RandomWords());
+        title: "welcome to flutter",
+        theme: new ThemeData(
+          primaryColor: Colors.white
+        ),
+        home: new RandomWords());
   }
 }
 
